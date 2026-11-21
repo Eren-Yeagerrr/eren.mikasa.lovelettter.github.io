@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For Sneha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--maroon:#2f0009;--wine:#6e0f1d;--paper:#efe7d6;--ink:#3a1f1f;--gold:#dcc08f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--maroon);color:var(--paper);font-family:'Cormorant Garamond',Georgia,serif;overflow-x:hidden}
+body:not(.open){height:100svh;overflow:hidden}
+button{font:inherit;cursor:pointer;border:0;background:none;padding:0}
+button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+#ov{position:fixed;inset:0;z-index:20;background:var(--maroon);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px);transition:opacity 1s}
+#ov.gone{opacity:0;pointer-events:none}
+#ov h1{font:600 italic clamp(1.8rem,6vw,2.6rem)/1.1 'Cormorant Garamond',serif;margin:0;color:var(--gold)}
+#ov p{margin:0;font-size:1.15rem;opacity:.75}
+#open{width:clamp(150px,42vw,200px);transition:transform .3s;filter:drop-shadow(0 10px 24px rgba(0,0,0,.6))}
+#open:hover{transform:scale(1.05)}#open:active{transform:scale(.94)}
+#open svg,.seal svg{width:100%;height:auto;display:block}
+.letter{padding:130px 16px 90px}
+.paper{position:relative;width:min(580px,92vw);margin:0 auto;padding:clamp(48px,9vw,72px) clamp(26px,7vw,56px) clamp(40px,8vw,60px);color:var(--ink)}
+.paper::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 6% 5%,rgba(236,214,150,.55),transparent 42%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .35 0 0 0 0 .25 0 0 0 .2 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E"),var(--paper);filter:url(#rough) drop-shadow(0 20px 28px rgba(0,0,0,.55))}
+.paper>*{position:relative;z-index:1}
+.seal{position:absolute;z-index:3;left:50%;top:-58px;width:112px;margin-left:-56px;opacity:0;filter:drop-shadow(0 6px 8px rgba(0,0,0,.45))}
+.open .seal{animation:stamp .8s .6s both cubic-bezier(.2,1.5,.4,1)}
+@keyframes stamp{from{opacity:0;transform:scale(1.7) rotate(-12deg)}to{opacity:1;transform:none}}
+.paper p{font:500 clamp(1.4rem,4.8vw,1.75rem)/1.5 'Caveat',cursive;margin:0 0 1em}
+.paper .to{font-weight:700;font-size:clamp(1.8rem,6vw,2.2rem)}
+.paper .sig{margin:1.6em 0 0}.paper .sig b{display:block;font-size:2.3rem;line-height:1.1;margin-top:.1em}
+.wall{padding:40px 20px 130px}
+.grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:56px;justify-items:center}
+.pol{margin:0;position:relative;width:min(340px,82vw);background:#f3ede0;padding:14px 14px 60px;transform:rotate(var(--r));box-shadow:0 14px 30px rgba(0,0,0,.55);transition:transform .35s}
+.pol:hover{transform:rotate(0) scale(1.03)}
+.pol img{display:block;width:100%;aspect-ratio:1;object-fit:cover;filter:sepia(.12) contrast(1.03);box-shadow:inset 0 0 0 1px rgba(0,0,0,.2)}
+.pol::before{content:"";position:absolute;top:-12px;left:50%;width:88px;height:24px;margin-left:-44px;background:rgba(220,192,143,.55);transform:rotate(-3deg)}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr;gap:70px 50px}.pol:nth-child(even){margin-top:70px}.pol:last-child{grid-column:1/-1;margin-top:0}}
+.stage{position:relative;min-height:100svh;display:grid;place-items:center;padding:70px 0;overflow:hidden;background:#150307}
+#bg{position:absolute;inset:0;width:100%;height:100%}
+.stage::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 35%,rgba(10,0,3,.75) 100%),linear-gradient(var(--maroon),transparent 14%);pointer-events:none}
+.card{position:relative;z-index:2;width:min(360px,86vw);padding:26px 24px 20px;border-radius:22px;background:linear-gradient(155deg,#8a1626,#5d0d1a 60%,#6c1220);box-shadow:0 30px 60px rgba(0,0,0,.65),inset 0 0 0 2px rgba(220,192,143,.28),inset 0 0 0 7px #6a1121,inset 0 0 0 8px rgba(220,192,143,.18)}
+.np{text-align:center;color:var(--gold);letter-spacing:.28em;font-size:.82rem;text-transform:uppercase;margin-bottom:16px}
+.art{aspect-ratio:1;border-radius:14px;overflow:hidden;box-shadow:0 0 0 3px #6a1121,0 0 0 4px rgba(220,192,143,.3),0 10px 24px rgba(0,0,0,.5)}
+.art img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+.meta{text-align:center;margin:18px 0 10px}.meta b{display:block;font-size:1.5rem;font-weight:600;color:#f4e8d2}.meta span{color:var(--gold);font-style:italic;font-size:1.1rem}
+#seek{-webkit-appearance:none;appearance:none;width:100%;height:16px;margin:6px 0;background:transparent;cursor:pointer;--p:0%}
+#seek::-webkit-slider-runnable-track{height:3px;border-radius:2px;background:linear-gradient(to right,var(--gold) var(--p),rgba(220,192,143,.3) var(--p))}
+#seek::-moz-range-track{height:3px;border-radius:2px;background:linear-gradient(to right,var(--gold) var(--p),rgba(220,192,143,.3) var(--p))}
+#seek::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:12px;margin-top:-4.5px;border-radius:50%;background:var(--gold);border:0}
+#seek::-moz-range-thumb{width:12px;height:12px;border-radius:50%;background:var(--gold);border:0}
+.ctrl{display:flex;align-items:center;justify-content:center;gap:34px;margin:10px 0 8px}
+.ctrl svg{width:24px;height:24px;fill:var(--gold);display:block}
+.ctrl .pp{width:66px;height:66px;border-radius:50%;background:var(--gold);display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.4);transition:transform .2s}
+.ctrl .pp:active{transform:scale(.92)}.ctrl .pp svg{fill:#5d0d1a;width:28px;height:28px}
+.ctrl .lp{opacity:.9}
+.tm{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--gold)}
+.tm div{display:flex;gap:14px;align-items:center}
+#hrt svg{width:22px;height:22px;fill:none;stroke:var(--gold);stroke-width:1.6;display:block}
+#hrt.on svg{fill:#e0485a;stroke:#e0485a}
+#err{display:none;text-align:center;font-size:.85rem;color:#f2b6bd;margin-top:8px}
+@media(prefers-reduced-motion:reduce){.open .seal{animation:none;opacity:1}#ov{transition:none}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<radialGradient id="wg" cx="38%" cy="30%" r="85%"><stop offset="0" stop-color="#cf2a3d"/><stop offset=".55" stop-color="#8f1522"/><stop offset="1" stop-color="#550914"/></radialGradient>
+<filter id="wob"><feTurbulence baseFrequency=".06" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter>
+<filter id="rough" x="-4%" y="-3%" width="108%" height="106%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="4" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="14"/></filter>
+<symbol id="seal" viewBox="0 0 100 100"><g filter="url(#wob)"><path id="hp" d="M50 92C8 62 2 30 25 15C38 8 48 14 50 24C52 14 62 8 75 15C98 30 92 62 50 92Z" fill="url(#wg)"/></g>
+<path transform="translate(19 20) scale(.62)" d="M50 92C8 62 2 30 25 15C38 8 48 14 50 24C52 14 62 8 75 15C98 30 92 62 50 92Z" fill="#7a0f1c" stroke="#d0485a" stroke-opacity=".55" stroke-width="3"/>
+<path d="M26 22C32 16 42 17 46 26" fill="none" stroke="#f08a96" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/></symbol>
+</defs></svg>
+
+<div id="ov"><h1>For Sneha</h1><button id="open" aria-label="Open the letter"><svg><use href="#seal"/></svg></button><p>Tap the seal to open</p></div>
+
+<main>
+<section class="letter"><div class="paper">
+<div class="seal"><svg><use href="#seal"/></svg></div>
+<p class="to">My Dear Sneha,</p>
+<p>Even with the miles stretching between us, you are closer to me than my own heartbeat. Because we do not get to meet often, I carry our memories in every breath I take, holding onto them as the quiet proof that something truly beautiful exists in this world.</p>
+<p>I love you more than I have ever loved myself. Every dream I have for tomorrow only makes sense because you are standing beside me in it. When I try to picture a world without your voice, your warmth, and your touch, everything simply fades to nothing. Losing you feels like losing the very air that keeps me alive.</p>
+<p>Please do not let the distance make us forget what we have built. My future has always been written in your name.</p>
+<p class="sig">Forever yours,<b>Taaseen</b></p>
+</div></section>
+
+<section class="wall"><div class="grid"><figure class="pol" style="--r:-4deg"><img src="p1.jpg" alt="Taaseen and Sneha together" loading="lazy"></figure><figure class="pol" style="--r:3deg"><img src="p2.jpg" alt="Taaseen and Sneha together" loading="lazy"></figure><figure class="pol" style="--r:-2.5deg"><img src="p3.jpg" alt="Taaseen and Sneha together" loading="lazy"></figure><figure class="pol" style="--r:4deg"><img src="p4.jpg" alt="Taaseen and Sneha together" loading="lazy"></figure><figure class="pol" style="--r:-3deg"><img src="p5.jpg" alt="Taaseen and Sneha together" loading="lazy"></figure><figure class="pol" style="--r:2.5deg"><img src="p6.jpg" alt="Taaseen and Sneha together" loading="lazy"></figure><figure class="pol" style="--r:-3.5deg"><img src="p7.jpg" alt="Taaseen and Sneha together" loading="lazy"></figure></div></section>
+
+<section class="stage">
+<svg id="bg" aria-hidden="true"></svg>
+<div class="card">
+<div class="np">Now Playing</div>
+<div class="art"><img src="album.jpg" alt="Taaseen and Sneha"></div>
+<div class="meta"><b>About You</b><span>The 1975</span></div>
+<input type="range" id="seek" min="0" max="1000" value="0" aria-label="Seek">
+<div class="ctrl">
+<button id="rs" aria-label="Restart song"><svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
+<button id="pp" class="pp" aria-label="Play"></button>
+<span class="lp" title="Repeating"><svg viewBox="0 0 24 24"><path d="M17 2l4 4-4 4V7H6v3H4V6a1 1 0 011-1h12V2zM7 22l-4-4 4-4v3h11v-3h2v4a1 1 0 01-1 1H7v3z"/></svg></span>
+</div>
+<div class="tm"><span id="cur">0:00</span><div><span id="rem">-0:00</span><button id="hrt" aria-label="Like"><svg viewBox="0 0 24 24"><path d="M12 21C4 15 2 11 2 8a5 5 0 0110-1 5 5 0 0110 1c0 3-2 7-10 13z"/></svg></button></div></div>
+<div id="err">The song could not load. Try reloading the page.</div>
+</div>
+<audio id="song" loop preload="auto" src="song.mp3"></audio>
+</section>
+</main>
+
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},a=$('song');
+var PLAY='<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>',PAUSE='<svg viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>';
+function fmt(s){s=Math.max(0,Math.floor(s||0));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+function ui(){$('pp').innerHTML=a.paused?PLAY:PAUSE;$('pp').setAttribute('aria-label',a.paused?'Play':'Pause')}
+function tick(){var p=a.duration?a.currentTime/a.duration:0;$('seek').value=p*1000;$('seek').style.setProperty('--p',p*100+'%');$('cur').textContent=fmt(a.currentTime);$('rem').textContent='-'+fmt((a.duration||0)-a.currentTime)}
+ui();a.addEventListener('play',ui);a.addEventListener('pause',ui);a.addEventListener('timeupdate',tick);a.addEventListener('loadedmetadata',tick);
+a.addEventListener('error',function(){$('err').style.display='block'});
+$('seek').oninput=function(){if(a.duration)a.currentTime=this.value/1000*a.duration};
+$('pp').onclick=function(){a.paused?a.play():a.pause()};
+$('rs').onclick=function(){a.currentTime=0};
+$('hrt').onclick=function(){this.classList.toggle('on')};
+$('open').onclick=function(){a.play().catch(function(){});document.body.classList.add('open');$('ov').classList.add('gone');setTimeout(function(){$('ov').remove()},1100)};
+/* dahlia background */
+var s='<defs><radialGradient id="pg" cx="50%" cy="100%" r="100%"><stop offset="0" stop-color="#37040f"/><stop offset=".55" stop-color="#8e1428"/><stop offset="1" stop-color="#c2303f"/></radialGradient><symbol id="dh" viewBox="-100 -100 200 200" overflow="visible">';
+[[18,96,20],[16,78,19],[14,60,17],[12,44,14],[10,30,11],[8,16,8]].forEach(function(r,k){for(var i=0;i<r[0];i++){var L=r[1],w=r[2];s+='<path transform="rotate('+(i*360/r[0]+k*9)+')" d="M0 0C'+-w+' '+-L*.35+' '+-w*.7+' '+-L*.85+' 0 '+-L+'C'+w*.7+' '+-L*.85+' '+w+' '+-L*.35+' 0 0Z" fill="url(#pg)" stroke="rgba(255,150,150,.28)" stroke-width=".8"/>'}});
+s+='<circle r="4" fill="#c9a24a" opacity=".6"/></symbol></defs>';
+var seed=11;function rnd(){seed=(seed*16807)%2147483647;return seed/2147483647}
+for(var i=0;i<14;i++){s+='<ellipse cx="'+rnd()*100+'%" cy="'+rnd()*100+'%" rx="'+(50+rnd()*50)+'" ry="'+(18+rnd()*16)+'" fill="'+(rnd()>.5?'#2b3a22':'#4a4a1f')+'" opacity=".55" style="transform:rotate('+Math.round(rnd()*180)+'deg);transform-box:fill-box;transform-origin:center"/>'}
+for(var r=0;r<6;r++)for(var c=0;c<5;c++){var z=190+rnd()*120;s+='<svg x="'+((c+.5)/5*100-6+rnd()*12)+'%" y="'+((r+.5)/6*100-5+rnd()*10)+'%" overflow="visible"><g transform="rotate('+Math.round(rnd()*360)+')"><use href="#dh" x="'+-z/2+'" y="'+-z/2+'" width="'+z+'" height="'+z+'"/></g></svg>'}
+$('bg').innerHTML=s;
+})();
+</script></body></html>
